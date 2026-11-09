@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Mandiri JS</title>
+</head>
+<body>
+    <button id="btnAksi">Ubah Kotak</button>
+    <div id="kotakUtama" 
+    style="width: 200px; 
+        height: 100px; 
+        border: 2px solid black; 
+        margin-top: 10px;">Teks Asli</div>
+    <div id="wadahPesan"></div>
+
+    <script>
+        const tombol = document.getElementById('btnAksi');
+        const kotak = document.getElementById('kotakUtama');
+        const wadah = document.getElementById('wadahPesan');
+
+        tombol.addEventListener('click', function() {
+            // Semua aksi akan ditulis di dalam sini
+        });
+
+        // 1. Mengubah warna latar belakang lewat properti style
+        kotak.style.backgroundColor = "red";
+
+        // 2. Mengubah isi teks di dalam kotak
+        kotak.innerText = "Warna telah diubah!";
+
+        // 3. Menciptakan elemen <p> baru
+        const pBaru = document.createElement('p');
+
+        // 4. Memberi isi teks ke elemen baru
+        pBaru.innerText = "Paragraf ini muncul setelah tombol diklik!";
+
+        // 5. Memasukkan elemen baru ke dalam halaman (wadahPesan)
+        wadah.appendChild(pBaru);
+    </script>
+</body>
+</html>
